@@ -1,0 +1,6 @@
+services:
+    - docker
+script:
+    - docker login -u $dockeruser -p $dockerpass
+    - docker build -t andykuszyk/latex:latest .
+    - docker push andykuszyk/latex:latest
